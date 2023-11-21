@@ -2,24 +2,13 @@
 #include <cmath>
 int main()
 {
-//Завдання 1.1
-    double p = 3.14;
-    std::cout << "Enter radiys: ";
-    int r;
-    std::cin >> r;
-    std::cout << "Enter action p/s: ";
-    char a;
-    std::cin >> a;
-    switch (a)
-    {
-    case('p'):
-        std::cout << "The radiys is: " << 2 * r * p;
-        break;
-    case('s'):
-        std::cout << "The square is: " << p * r * r;
-        break;
-    default:
-        std::cout << "Wrong answer";
-        break;
-    }
+	setlocale(0, ".1251");
+	const int t1 = 1;
+	const int t2 = 2;
+	int g;
+	std::cout << "Enter fastening: ";
+	std::cin >> g;
+	std::cout << "Пiсля 1 секунди тiло пройшло: " << (g * pow(t1, 2)) / 2 << std::endl;
+	std::cout << "Пiсля 2 секунд тiло пройшло: " << (g * pow(t2, 2)) / 2;
+
 }
