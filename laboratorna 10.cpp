@@ -3,10 +3,10 @@
 int main()
 {
 	setlocale(0, ".1251");
-	std::cout << "Введiть х: ";
-	double x;
-	std::cin >> x;
-	double z1 = (pow(x, 2) + 2 * x - 3 + (x + 1) * sqrt(pow(x, 2) - 9)) / (pow(x, 2) - 2 * x - 3 + (x - 1) * sqrt(pow(x, 2) - 9));
-	double z2 = sqrt((x + 3) / (x - 3));
-	std::cout << " Z1=" << z1 << " Z2=" << z2<<" I тому цi рiвняння рiвнi";
+	const double M = 3.8;
+	const double p = 2;
+	double t = exp(M + 1);
+	double x = pow(t, 2) + p;
+	double y = log(fabs(x + t));
+	std::cout << "Вiдповiдь y= " << y << std::endl;
 }
