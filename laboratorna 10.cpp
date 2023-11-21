@@ -3,12 +3,10 @@
 int main()
 {
 	setlocale(0, ".1251");
-	const int i = 16;
-	int xA = 0, yA = 0, xB = i, yB = i - 1, xC = -i, yC = i + 1;
-	double h = std::fabs(xA * (yB - yC) + xB * (yC - yA) + xC * (yA - yB)) / std::pow((xB - xC), 2) + std::pow((xB - xC), 2);
-	double AB_L = std::sqrt((xB - xA) * (xB - xA) + (yB - yA) * (yB - yA));
-	double AC_L = std::sqrt((xC - xA) * (xC - xA) + (yC - yA) * (yC - yA));
-	double wA = (2 * AB_L * AC_L) / (AB_L + AC_L);
-	std::cout << "Висота: " << h << std::endl;
-	std::cout << "Бiсектриса: " << wA << std::endl;
+	std::cout << "Введiть х: ";
+	double x;
+	std::cin >> x;
+	double z1 = (pow(x, 2) + 2 * x - 3 + (x + 1) * sqrt(pow(x, 2) - 9)) / (pow(x, 2) - 2 * x - 3 + (x - 1) * sqrt(pow(x, 2) - 9));
+	double z2 = sqrt((x + 3) / (x - 3));
+	std::cout << " Z1=" << z1 << " Z2=" << z2<<" I тому цi рiвняння рiвнi";
 }
